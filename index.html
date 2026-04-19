@@ -20,6 +20,7 @@
         <a href="#servizi">Servizi</a>
         <a href="#perche-noi">Chi siamo</a>
         <a href="#aree">Aree</a>
+        <a href="#richiesta">Richiedi</a>
         <a href="#contatti" class="btn btn-outline">Contattaci</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -172,6 +173,220 @@
         </div>
       </div>
       <p class="areas-note">Non sei in queste zone? <a href="#contatti">Contattaci comunque</a> — valutiamo ogni richiesta.</p>
+    </div>
+  </section>
+
+  <!-- FORM RICHIESTA -->
+  <section id="richiesta" class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Trova la tua badante</h2>
+        <p>Raccontaci di cosa hai bisogno — ti contatteremo entro 24 ore con la soluzione più adatta</p>
+      </div>
+
+      <div class="wizard">
+        <!-- Progress bar -->
+        <div class="wizard-progress">
+          <div class="wizard-step-dot active" data-step="1">1</div>
+          <div class="wizard-line"></div>
+          <div class="wizard-step-dot" data-step="2">2</div>
+          <div class="wizard-line"></div>
+          <div class="wizard-step-dot" data-step="3">3</div>
+          <div class="wizard-line"></div>
+          <div class="wizard-step-dot" data-step="4">4</div>
+        </div>
+
+        <form id="wizardForm" onsubmit="submitWizard(event)">
+
+          <!-- STEP 1: Genere -->
+          <div class="wizard-panel active" data-panel="1">
+            <h3 class="wizard-title">Preferisci badante donna o badante uomo?</h3>
+            <div class="radio-group">
+              <label class="radio-card">
+                <input type="radio" name="genere" value="uomo" />
+                <span class="radio-box">
+                  <span class="radio-icon">👨</span>
+                  <span>Uomo</span>
+                </span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="genere" value="donna" />
+                <span class="radio-box">
+                  <span class="radio-icon">👩</span>
+                  <span>Donna</span>
+                </span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="genere" value="indifferente" checked />
+                <span class="radio-box">
+                  <span class="radio-icon">🤝</span>
+                  <span>Indifferente</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 2: Attività -->
+          <div class="wizard-panel" data-panel="2">
+            <h3 class="wizard-title">Seleziona le attività che richiedi all'assistente:</h3>
+            <div class="activities-grid">
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="bagno" />
+                <span class="activity-box">
+                  <span class="activity-icon">🛁</span>
+                  <span>Fare il bagno</span>
+                </span>
+              </label>
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="vestire" />
+                <span class="activity-box">
+                  <span class="activity-icon">👔</span>
+                  <span>Vestire e gestire</span>
+                </span>
+              </label>
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="toilet" />
+                <span class="activity-box">
+                  <span class="activity-icon">🚿</span>
+                  <span>Toilet</span>
+                </span>
+              </label>
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="farmaci" />
+                <span class="activity-box">
+                  <span class="activity-icon">💊</span>
+                  <span>Promemoria farmaci</span>
+                </span>
+              </label>
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="cibi" />
+                <span class="activity-box">
+                  <span class="activity-icon">🍽️</span>
+                  <span>Preparazione cibi</span>
+                </span>
+              </label>
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="spesa" />
+                <span class="activity-box">
+                  <span class="activity-icon">🛒</span>
+                  <span>Fare la spesa</span>
+                </span>
+              </label>
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="mobilita" />
+                <span class="activity-box">
+                  <span class="activity-icon">♿</span>
+                  <span>Trasferimento e mobilità</span>
+                </span>
+              </label>
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="trasporto" />
+                <span class="activity-box">
+                  <span class="activity-icon">🚗</span>
+                  <span>Trasporto</span>
+                </span>
+              </label>
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="pulizia" />
+                <span class="activity-box">
+                  <span class="activity-icon">🧹</span>
+                  <span>Pulizia della casa</span>
+                </span>
+              </label>
+              <label class="activity-card">
+                <input type="checkbox" name="attivita" value="compagnia" />
+                <span class="activity-box">
+                  <span class="activity-icon">🫂</span>
+                  <span>Compagnia</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 3: Quando + notte -->
+          <div class="wizard-panel" data-panel="3">
+            <h3 class="wizard-title">Quando è richiesta l'assistenza?</h3>
+            <div class="radio-group vertical">
+              <label class="radio-card wide">
+                <input type="radio" name="quando" value="lun-ven" />
+                <span class="radio-box"><span>Da lunedì a venerdì</span></span>
+              </label>
+              <label class="radio-card wide">
+                <input type="radio" name="quando" value="lun-sab" />
+                <span class="radio-box"><span>Da lunedì al sabato</span></span>
+              </label>
+              <label class="radio-card wide">
+                <input type="radio" name="quando" value="convivenza" />
+                <span class="radio-box"><span>L'intera settimana (convivenza)</span></span>
+              </label>
+              <label class="radio-card wide">
+                <input type="radio" name="quando" value="weekend" />
+                <span class="radio-box"><span>Solo i weekend</span></span>
+              </label>
+              <label class="radio-card wide">
+                <input type="radio" name="quando" value="pochi-giorni" />
+                <span class="radio-box"><span>Pochi giorni</span></span>
+              </label>
+              <label class="radio-card wide">
+                <input type="radio" name="quando" value="poche-ore" />
+                <span class="radio-box"><span>Solo poche ore</span></span>
+              </label>
+            </div>
+            <h3 class="wizard-title" style="margin-top:32px;">Disponibilità notturna?</h3>
+            <div class="radio-group">
+              <label class="radio-card">
+                <input type="radio" name="notte" value="si" />
+                <span class="radio-box"><span class="radio-icon">🌙</span><span>Sì</span></span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="notte" value="no" checked />
+                <span class="radio-box"><span class="radio-icon">☀️</span><span>No</span></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 4: Contatti -->
+          <div class="wizard-panel" data-panel="4">
+            <h3 class="wizard-title">Come ti contatttiamo?</h3>
+            <div class="form-grid">
+              <div class="form-field">
+                <label>Nome e cognome *</label>
+                <input type="text" name="nome" placeholder="Mario Rossi" required />
+              </div>
+              <div class="form-field">
+                <label>Telefono *</label>
+                <input type="tel" name="telefono" placeholder="347 0000000" required />
+              </div>
+              <div class="form-field full">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="mario@email.com" />
+              </div>
+              <div class="form-field full">
+                <label>Descrivi brevemente la persona da assistere (opzionale)</label>
+                <textarea name="descrizione" rows="4" placeholder="Età, condizioni di salute, esigenze particolari..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUCCESS -->
+          <div class="wizard-panel" data-panel="5">
+            <div class="wizard-success">
+              <div class="success-icon">✅</div>
+              <h3>Richiesta inviata!</h3>
+              <p>Ti contatteremo entro 24 ore al numero o email che hai indicato.</p>
+              <a href="tel:3460007334" class="btn btn-primary" style="margin-top:16px;">Vuoi chiamarci subito?</a>
+            </div>
+          </div>
+
+          <!-- Navigazione -->
+          <div class="wizard-nav" id="wizardNav">
+            <button type="button" class="btn btn-secondary" id="btnBack" onclick="wizardBack()" style="display:none">← Indietro</button>
+            <button type="button" class="btn btn-primary" id="btnNext" onclick="wizardNext()">Avanti →</button>
+            <button type="submit" class="btn btn-primary" id="btnSubmit" style="display:none">Invia richiesta</button>
+          </div>
+
+        </form>
+      </div>
     </div>
   </section>
 

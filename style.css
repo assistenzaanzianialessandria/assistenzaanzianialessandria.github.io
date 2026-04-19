@@ -172,3 +172,81 @@ body { font-family: var(--font); color: var(--text); background: var(--white); l
   .hero-cta { flex-direction: column; }
   .btn { justify-content: center; }
 }
+
+/* WIZARD */
+.wizard { max-width: 780px; margin: 0 auto; background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); padding: 48px; }
+
+.wizard-progress { display: flex; align-items: center; justify-content: center; margin-bottom: 48px; }
+.wizard-step-dot {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--gray-200);
+  color: var(--gray-400); font-weight: 700; font-size: .9rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .3s;
+}
+.wizard-step-dot.active { background: var(--primary); color: var(--white); }
+.wizard-step-dot.done { background: var(--accent); color: var(--white); }
+.wizard-line { flex: 1; height: 2px; background: var(--gray-200); max-width: 80px; margin: 0 8px; }
+
+.wizard-panel { display: none; }
+.wizard-panel.active { display: block; }
+.wizard-title { font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-bottom: 24px; }
+
+/* Radio group */
+.radio-group { display: flex; gap: 16px; flex-wrap: wrap; }
+.radio-group.vertical { flex-direction: column; gap: 10px; }
+.radio-card input { display: none; }
+.radio-box {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 18px 24px; border: 2px solid var(--gray-200); border-radius: var(--radius);
+  cursor: pointer; transition: all .2s; min-width: 120px; text-align: center;
+  font-weight: 600; font-size: .95rem; color: var(--text);
+}
+.radio-card.wide .radio-box { flex-direction: row; justify-content: flex-start; min-width: 100%; padding: 14px 20px; }
+.radio-icon { font-size: 1.8rem; }
+.radio-card input:checked + .radio-box { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
+.radio-box:hover { border-color: var(--primary); }
+
+/* Activities grid */
+.activities-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.activity-card input { display: none; }
+.activity-box {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 18px 10px; border: 2px solid var(--gray-200); border-radius: var(--radius);
+  cursor: pointer; transition: all .2s; text-align: center;
+  font-size: .8rem; font-weight: 600; color: var(--gray-600); text-transform: uppercase; letter-spacing: .3px;
+}
+.activity-icon { font-size: 2rem; }
+.activity-card input:checked + .activity-box { border-color: var(--primary); background: var(--primary-light); color: var(--primary); }
+.activity-box:hover { border-color: var(--primary); transform: translateY(-2px); }
+
+/* Form fields */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-field { display: flex; flex-direction: column; gap: 8px; }
+.form-field.full { grid-column: 1 / -1; }
+.form-field label { font-weight: 600; font-size: .9rem; color: var(--dark); }
+.form-field input, .form-field textarea {
+  padding: 12px 16px; border: 2px solid var(--gray-200); border-radius: var(--radius);
+  font-family: var(--font); font-size: 1rem; color: var(--text);
+  transition: border-color .2s; resize: vertical;
+}
+.form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--primary); }
+
+/* Wizard nav */
+.wizard-nav { display: flex; justify-content: space-between; margin-top: 40px; gap: 16px; }
+
+/* Success */
+.wizard-success { text-align: center; padding: 32px 0; }
+.success-icon { font-size: 4rem; margin-bottom: 16px; }
+.wizard-success h3 { font-size: 1.8rem; font-weight: 800; color: var(--dark); margin-bottom: 12px; }
+.wizard-success p { color: var(--text-light); font-size: 1.05rem; }
+
+/* Responsive wizard */
+@media (max-width: 768px) {
+  .wizard { padding: 28px 20px; }
+  .activities-grid { grid-template-columns: repeat(3, 1fr); }
+  .form-grid { grid-template-columns: 1fr; }
+  .radio-group { gap: 10px; }
+}
+@media (max-width: 480px) {
+  .activities-grid { grid-template-columns: repeat(2, 1fr); }
+}
