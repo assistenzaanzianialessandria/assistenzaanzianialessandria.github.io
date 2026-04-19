@@ -9,7 +9,4 @@
   <!-- Text -->
   <text x="62" y="22" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="14" fill="#1a2332">ASSISTENZA</text>
   <text x="62" y="40" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="14" fill="#1a2332">ANZIANI</text>
-  <!-- AL badge -->
-  <rect x="178" y="26" width="28" height="17" rx="4" fill="#2ecc71"/>
-  <text x="192" y="39" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="12" fill="white" text-anchor="middle">AL</text>
 </svg>
