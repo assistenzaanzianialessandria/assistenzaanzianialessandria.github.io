@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SOS Badante — Assistenza domiciliare professionale a Novi Ligure, Alessandria e Tortona. Badante a ore, convivente, notturna e post-operatoria." />
+  <title>SOS Badante — Assistenza Domiciliare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">SOS<span>Badante</span></a>
+      <nav class="nav-links">
+        <a href="#servizi">Servizi</a>
+        <a href="#perche-noi">Chi siamo</a>
+        <a href="#aree">Aree</a>
+        <a href="#contatti" class="btn btn-outline">Contattaci</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#servizi" onclick="closeMobileMenu()">Servizi</a>
+      <a href="#perche-noi" onclick="closeMobileMenu()">Chi siamo</a>
+      <a href="#aree" onclick="closeMobileMenu()">Aree</a>
+      <a href="#contatti" onclick="closeMobileMenu()">Contattaci</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge">Assistenza domiciliare professionale</span>
+        <h1>Cura e presenza<br />quando più servono</h1>
+        <p>Badanti qualificate e selezionate per assistere i tuoi cari a casa, con umanità e professionalità. Attivi a <strong>Novi Ligure</strong>, <strong>Alessandria</strong> e <strong>Tortona</strong>.</p>
+        <div class="hero-cta">
+          <a href="tel:3460007334" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Chiama ora
+          </a>
+          <a href="#servizi" class="btn btn-secondary">Scopri i servizi</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-icon">🤝</div>
+          <p class="hero-card-title">Disponibili 7 giorni su 7</p>
+          <p class="hero-card-sub">Inclusi festivi e notturni</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">✅</div>
+          <p class="hero-card-title">Badanti verificate</p>
+          <p class="hero-card-sub">Selezione, referenze e formazione</p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">📍</div>
+          <p class="hero-card-title">3 province coperte</p>
+          <p class="hero-card-sub">Novi Ligure · Alessandria · Tortona</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section id="servizi" class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>I nostri servizi</h2>
+        <p>Soluzioni flessibili per ogni esigenza di assistenza domiciliare</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🕐</div>
+          <h3>Badante a ore</h3>
+          <p>Assistenza durante le ore del giorno, calibrata sulle necessità quotidiane del tuo familiare. Ideale per supporto parziale.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Badante convivente</h3>
+          <p>La badante vive con l'assistito per una presenza continua e una relazione di fiducia duratura. Massima serenità per tutta la famiglia.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌙</div>
+          <h3>Assistenza notturna</h3>
+          <p>Presenza dedicata durante la notte per anziani o persone non autosufficienti che necessitano di supervisione e supporto nelle ore serali.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💊</div>
+          <h3>Assistenza post-operatoria</h3>
+          <p>Supporto professionale nel periodo di recupero dopo un intervento chirurgico o un ricovero ospedaliero, per un ritorno sicuro a casa.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧓</div>
+          <h3>Compagnia anziani</h3>
+          <p>Presenza umana e stimolante per combattere la solitudine. Conversazione, passeggiate, attività quotidiane e piccole commissioni.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">♿</div>
+          <h3>Assistenza disabili</h3>
+          <p>Supporto specializzato per persone con disabilità fisiche o cognitive, con attenzione alla dignità, all'autonomia e alla qualità della vita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCHÉ NOI -->
+  <section id="perche-noi" class="section section-dark">
+    <div class="container">
+      <div class="section-header light">
+        <h2>Perché scegliere SOS Badante</h2>
+        <p>Un servizio pensato per dare tranquillità alle famiglie e rispetto alle persone assistite</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-num">01</div>
+          <h3>Selezione rigorosa</h3>
+          <p>Ogni badante viene selezionata con colloqui approfonditi, verifica delle referenze e valutazione delle competenze.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-num">02</div>
+          <h3>Risposta rapida</h3>
+          <p>Contattaci e ti proponiamo una soluzione entro 24 ore. In caso di urgenza, interveniamo il prima possibile.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-num">03</div>
+          <h3>Affiancamento continuo</h3>
+          <p>Non lasciamo soli né la famiglia né la badante: seguiamo il percorso nel tempo e gestiamo eventuali sostituzioni.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-num">04</div>
+          <h3>Trasparenza totale</h3>
+          <p>Nessun costo nascosto. Prima del servizio ti spieghiamo chiaramente tariffe, modalità e impegni contrattuali.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREE -->
+  <section id="aree" class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Dove operiamo</h2>
+        <p>Attualmente copriamo tre aree della provincia di Alessandria</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area-card">
+          <div class="area-pin">📍</div>
+          <h3>Novi Ligure</h3>
+          <p>Città e comuni limitrofi dell'area novese</p>
+        </div>
+        <div class="area-card">
+          <div class="area-pin">📍</div>
+          <h3>Alessandria</h3>
+          <p>Capoluogo e cintura urbana alessandrina</p>
+        </div>
+        <div class="area-card">
+          <div class="area-pin">📍</div>
+          <h3>Tortona</h3>
+          <p>Città e comuni della zona tortonese</p>
+        </div>
+      </div>
+      <p class="areas-note">Non sei in queste zone? <a href="#contatti">Contattaci comunque</a> — valutiamo ogni richiesta.</p>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contatti" class="section section-primary">
+    <div class="container">
+      <div class="section-header light">
+        <h2>Contattaci subito</h2>
+        <p>Siamo disponibili per rispondere a ogni tua domanda e trovare insieme la soluzione migliore</p>
+      </div>
+      <div class="contact-grid">
+        <a href="tel:3460007334" class="contact-card">
+          <div class="contact-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Telefono</p>
+            <p class="contact-value">346 000 7334</p>
+          </div>
+        </a>
+        <a href="mailto:ephadita@protonmail.com" class="contact-card">
+          <div class="contact-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">ephadita@protonmail.com</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo">SOS<span>Badante</span></span>
+      <p>© 2025 SOS Badante — Assistenza domiciliare a Novi Ligure, Alessandria e Tortona</p>
+      <div class="footer-links">
+        <a href="mailto:ephadita@protonmail.com">ephadita@protonmail.com</a>
+        <a href="tel:3460007334">346 000 7334</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
