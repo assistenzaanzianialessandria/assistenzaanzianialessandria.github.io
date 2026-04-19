@@ -304,3 +304,6 @@ body { font-family: var(--font); color: var(--text); background: var(--white); l
 /* LOGO IMG */
 .logo-img { display: flex; align-items: center; text-decoration: none; }
 .logo-img img { display: block; }
+
+/* Single area card */
+.areas-single { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
