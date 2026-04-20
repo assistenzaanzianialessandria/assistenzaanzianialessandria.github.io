@@ -309,9 +309,47 @@ body { font-family: var(--font); color: var(--text); background: var(--white); l
   .hero-cta-center { justify-content: flex-start; }
 }
 
-/* LOGO IMG */
-.logo-img { display: flex; align-items: center; text-decoration: none; }
-.logo-img img { display: block; }
+/* LOGO — Claude-inspired: compact mark + Georgia serif wordmark */
+.logo-img {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-img .logo-mark {
+  height: 42px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-wordmark .logo-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #c96442;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.logo-wordmark .logo-sub {
+  font-family: -apple-system, system-ui, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: #87867f;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Footer logo: slightly larger mark */
+.footer-brand .logo-img .logo-mark { height: 46px; }
+.footer-brand .logo-wordmark .logo-name { font-size: 1.15rem; }
+.footer-brand .logo-wordmark .logo-sub { font-size: 0.65rem; }
 
 /* Single area card */
 .areas-single { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
