@@ -652,7 +652,12 @@
       background: var(--bg-deepest);
       border-top: 1px solid var(--border-subtle);
     }
-    .footer p { color: var(--text-subtle); }
+    .footer p, .footer-info p { color: var(--text-subtle); }
+    .footer-info a { color: var(--text-subtle); }
+    .footer-info a:hover { color: var(--text-secondary); }
+    .footer-info .footer-copy { color: var(--text-subtle); opacity: 0.6; }
+    .footer-links a { color: var(--text-subtle); }
+    .footer-links a:hover { color: var(--text-secondary); }
     .footer-links a { color: var(--text-subtle); }
     .footer-links a:hover { color: var(--text-secondary); }
 
@@ -916,11 +921,21 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <img src="logo-sogeenp.png" alt="Assistenza Anziani Alessandria" height="36" />
-      <p>© 2026 Assistenza Anziani Alessandria · Tel. 0143 65217</p>
-      <div class="footer-links">
-        <a href="assistenza-domiciliare.html">Assistenza domiciliare</a>
-        <a href="badante.html">Ricerca Assistente Familiare</a>
+      <div class="footer-brand">
+        <img src="logo-sogeenp.png" alt="Assistenza Anziani Alessandria" height="54" />
+        <div class="footer-info">
+          <p>Piazza Ellero, 45 · 12084 Mondovì (CN)</p>
+          <p>P/IVA-C.F. 03247770047</p>
+          <p>Tel. <a href="tel:014365217">0143 65217</a> · <a href="mailto:sogeenp@live.it">sogeenp@live.it</a></p>
+          <a href="https://www.ipensionati.it" target="_blank" rel="noopener">www.ipensionati.it</a>
+          <p class="footer-copy">© 2026 Assistenza Anziani Alessandria</p>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-links">
+          <a href="assistenza-domiciliare.html">Assistenza domiciliare</a>
+          <a href="badante.html">Ricerca Assistente Familiare</a>
+        </div>
       </div>
     </div>
   </footer>

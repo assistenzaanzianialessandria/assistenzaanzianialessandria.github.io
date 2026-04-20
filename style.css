@@ -146,12 +146,18 @@ body { font-family: var(--font); color: var(--text); background: var(--white); l
 .contact-value { font-weight: 700; font-size: 1.05rem; }
 
 /* FOOTER */
-.footer { background: var(--dark); padding: 32px 0; }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-.footer .logo { color: var(--white); }
-.footer p { color: rgba(255,255,255,0.45); font-size: .85rem; }
-.footer-links { display: flex; gap: 24px; }
-.footer-links a { color: rgba(255,255,255,0.5); font-size: .85rem; text-decoration: none; transition: color .2s; }
+.footer { background: var(--dark); padding: 40px 0; }
+.footer-inner { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+.footer-brand { display: flex; flex-direction: column; gap: 14px; }
+.footer-brand img { display: block; }
+.footer-info { display: flex; flex-direction: column; gap: 3px; }
+.footer-info p,
+.footer-info a { color: rgba(255,255,255,0.42); font-size: .8rem; text-decoration: none; line-height: 1.6; }
+.footer-info a:hover { color: rgba(255,255,255,0.75); }
+.footer-info .footer-copy { color: rgba(255,255,255,0.28); font-size: .75rem; margin-top: 6px; }
+.footer-nav { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.footer-links { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.footer-links a { color: rgba(255,255,255,0.45); font-size: .82rem; text-decoration: none; transition: color .2s; }
 .footer-links a:hover { color: var(--white); }
 
 /* RESPONSIVE */
@@ -163,8 +169,10 @@ body { font-family: var(--font); color: var(--text); background: var(--white); l
   .hero-visual { flex-direction: column; }
   .areas-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; }
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+  .footer-brand { align-items: center; }
+  .footer-nav { align-items: center; }
+  .footer-links { align-items: center; }
   .section { padding: 56px 0; }
 }
 
